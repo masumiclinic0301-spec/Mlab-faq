@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よくあるご質問 | Masumi Women's Health Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest: #B3717F;
+    --forest-deep: #7D4A56;
+    --sage: #D9A8B2;
+    --sage-tint: #FBEEF0;
+    --gold: #C9A96A;
+    --gold-deep: #A6813F;
+    --cream: #FDF8F6;
+    --paper: #F8EEEC;
+    --ink: #3A2C2E;
+    --ink-soft: #7C6669;
+    --line: #EAD9DB;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{
+    margin:0; padding:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  body{
+    padding-bottom:92px; /* space for sticky CTA */
+  }
+
+  .brandmark{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:30px 20px 6px;
+  }
+
+  .brandmark .m{
+    width:36px; height:36px;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-style:italic;
+    color:var(--forest-deep);
+    font-size:19px;
+  }
+
+  .brandmark .word{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:13.5px;
+    letter-spacing:.22em;
+    color:var(--forest-deep);
+  }
+
+  header.hero{
+    padding:8px 24px 30px;
+    text-align:center;
+  }
+
+  header.hero h1{
+    font-family:'Shippori Mincho', serif;
+    font-weight:500;
+    font-size:26px;
+    letter-spacing:.03em;
+    line-height:1.6;
+    color:var(--forest-deep);
+    margin:6px 0 10px;
+  }
+
+  header.hero p{
+    font-size:14px;
+    line-height:1.9;
+    color:var(--ink-soft);
+    max-width:420px;
+    margin:0 auto;
+  }
+
+  header.hero .tagline{
+    font-family:'Shippori Mincho', serif;
+    font-size:13px;
+    color:var(--gold-deep);
+    letter-spacing:.08em;
+    margin-top:14px;
+  }
+
+  .divider{
+    width:44px; height:1px;
+    background:var(--gold);
+    margin:20px auto;
+  }
+
+  main{
+    max-width:520px;
+    margin:0 auto;
+    padding:0 18px;
+  }
+
+  .category{
+    margin-bottom:8px;
+  }
+
+  .category-label{
+    font-family:'Shippori Mincho', serif;
+    font-size:13.5px;
+    letter-spacing:.08em;
+    color:var(--forest-deep);
+    padding:22px 6px 10px;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+
+  .category-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+    transform:translateY(-2px);
+  }
+
+  .qa{
+    border-top:1px solid var(--line);
+  }
+  .qa:last-child{
+    border-bottom:1px solid var(--line);
+  }
+
+  .qa summary{
+    list-style:none;
+    cursor:pointer;
+    padding:16px 4px;
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .qa summary::-webkit-details-marker{ display:none; }
+
+  .qa summary .q-mark{
+    font-family:'Shippori Mincho', serif;
+    color:var(--gold-deep);
+    font-size:15px;
+    line-height:1.6;
+    flex-shrink:0;
+  }
+
+  .qa summary .q-text{
+    font-size:15px;
+    line-height:1.65;
+    font-weight:500;
+    color:var(--ink);
+    flex:1;
+  }
+
+  .qa summary .chev{
+    flex-shrink:0;
+    width:18px; height:18px;
+    margin-top:2px;
+    position:relative;
+  }
+  .qa summary .chev::before,
+  .qa summary .chev::after{
+    content:"";
+    position:absolute;
+    background:var(--forest);
+    border-radius:1px;
+  }
+  .qa summary .chev::before{
+    width:10px; height:1.6px;
+    top:8px; left:4px;
+  }
+  .qa summary .chev::after{
+    width:1.6px; height:10px;
+    top:4px; left:8px;
+    transition:transform .2s ease;
+  }
+  .qa[open] summary .chev::after{
+    transform:rotate(90deg);
+  }
+
+  .qa .a-body{
+    padding:0 4px 20px 30px;
+  }
+
+  .qa .a-body p{
+    font-size:13.5px;
+    line-height:1.9;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+
+  .qa .a-body a.inline-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:13px;
+    color:var(--forest-deep);
+    text-decoration:none;
+    padding:9px 16px;
+    border:1px solid var(--forest);
+    border-radius:2px;
+    font-weight:500;
+  }
+
+  .qa .a-body a.inline-cta:active{
+    background:var(--sage-tint);
+  }
+
+  section.closing{
+    text-align:center;
+    padding:44px 20px 18px;
+  }
+
+  section.closing p{
+    font-size:13px;
+    line-height:1.9;
+    color:var(--ink-soft);
+    max-width:400px;
+    margin:0 auto 6px;
+  }
+
+  section.closing .signature{
+    font-family:'Shippori Mincho', serif;
+    font-size:13px;
+    color:var(--forest-deep);
+    margin-top:16px;
+  }
+
+  .sticky-cta{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    background:var(--cream);
+    border-top:1px solid var(--line);
+    padding:12px 18px calc(12px + env(safe-area-inset-bottom));
+    display:flex;
+    justify-content:center;
+  }
+
+  .sticky-cta a{
+    display:block;
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    background:var(--forest-deep);
+    color:var(--cream);
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    letter-spacing:.03em;
+    padding:14px 0;
+    border-radius:2px;
+  }
+
+  .sticky-cta a span.gold-dot{
+    display:inline-block;
+    width:5px; height:5px;
+    background:var(--gold);
+    border-radius:50%;
+    margin-right:8px;
+    vertical-align:middle;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .qa summary .chev::after{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brandmark">
+  <div class="m">M</div>
+  <div class="word">MASUMI WOMEN'S HEALTH LAB</div>
+</div>
+
+<header class="hero">
+  <h1>よくあるご質問</h1>
+  <p>養生LINE・健康経営セミナー・講演会について、<br>登録前に多くいただく質問をまとめました。</p>
+  <div class="tagline">女性、本来の輝きをひらく。</div>
+</header>
+
+<main>
+
+  <div class="category">
+    <div class="category-label">保険診療との違い</div>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">ますみクリニックの診察と何が違うのですか？保険は使えますか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>Mlabのサービス（養生LINE・個別ヘルスコーチング・企業向け講演）は、保険診療とは別の自費のヘルスケアサポートです。すでに出ている症状を治療するのではなく、不調が出る前の体づくりや知識の習得を目的としています。</p>
+        <a class="inline-cta" href="#">養生LINEについて →</a>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">クリニックの患者でなくても利用できますか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>はい、ますみクリニックに通院していない方もご利用いただけます。Mlabは長崎で働く女性の健康を支えるための、クリニックの外側にあるサービスです。</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="category">
+    <div class="category-label">養生LINEについて</div>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">養生LINEでは何をしてもらえますか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>月額制で、東洋医学・栄養・生活習慣の視点からあなた専用の養生アドバイスをお届けします。PMS・自律神経の乱れ・慢性疲労など、検査に出にくい不調に悩む方に向けたサービスです。お申込みフォームを受け取ってから3営業日以内にお返事いたします。</p>
+        <a class="inline-cta" href="https://forms.gle/uxYPwNvAUedyxuMe8">養生LINEお申し込みフォーム →</a>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">更年期世代ではないのですが、対象になりますか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>更年期に限らず、PMSや疲労感など幅広い不調が対象です。まずは「知る・気づく」シリーズのコンテンツで、ご自身の不調タイプをセルフチェックしてみてください。</p>
+        <a class="inline-cta" href="#">セルフチェックを見る →</a>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">無料の公式LINEと養生LINEは何が違うのですか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>無料の公式LINEは「知る・気づく」といった知識コンテンツの配信が中心です。養生LINEは「行動する、変わる」をテーマに月額制で、生活改善プログラムを行います。あなた個人が実践するワークを行い、月に一回チェックシートで体調をスコア化します。まずは無料LINEからお試しいただけます。</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="category">
+    <div class="category-label">健康経営・講演会について</div>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">会社の健康経営やセミナーを依頼できますか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>女性特有の不調による生産性低下をテーマに、企業様向けにオーダーメイドで講演・研修を実施しています。管理職向けの短時間セミナーから、社員向けの研修まで対応可能です。お申込みフォームを受け取ってから3営業日以内にお返事いたします。</p>
+        <a class="inline-cta" href="https://forms.gle/CuKm3786LJkFzahs7">講演お申込みフォーム →</a>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">費用や時間の目安を教えてください。</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>ミニ講演から半日の研修まで、目的に応じて設計しています。お問い合わせはMlab公式LINEにご相談ください。</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="category">
+    <div class="category-label">山口ますみについて</div>
+
+    <details class="qa">
+      <summary>
+        <span class="q-mark">Q</span>
+        <span class="q-text">どんな経歴の医師が対応してくれるのですか？</span>
+        <span class="chev"></span>
+      </summary>
+      <div class="a-body">
+        <p>女性専用内科クリニックの院長として、「病気になる手前」の不調にも数多く向き合ってきました。西洋医学・東洋医学・栄養の3つの視点を組み合わせてサポートします。</p>
+        <a class="inline-cta" href="https://masumiclinic0301-spec.github.io/prof/">経歴・プロフィールを見る →</a>
+      </div>
+    </details>
+
+  </div>
+
+</main>
+
+<section class="closing">
+  <div class="divider"></div>
+  <p>ここに載っていないご質問は、公式LINEから直接お気軽にお問い合わせください。</p>
+  <div class="signature">Masumi Women's Health Lab　山口ますみ</div>
+</section>
+
+<div class="sticky-cta">
+  <a href="#"><span class="gold-dot"></span>養生LINEについて詳しく見る</a>
+</div>
+
+</body>
+</html>
